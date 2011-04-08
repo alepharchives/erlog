@@ -1,0 +1,8 @@
+#!/usr/bin/env escript
+%% -*- erlang -*-
+%%! -pa ../ebin/
+main([_]) ->
+    main([]);
+main([]) ->
+    io:format("~p~n", [os:cmd("pwd")]),
+    erlog_shell:server().
